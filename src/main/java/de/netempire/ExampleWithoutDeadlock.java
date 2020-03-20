@@ -44,6 +44,8 @@ public class ExampleWithoutDeadlock {
             }
         });
         process_one.start();
+        process_one.join();
+        // Wartet bis Thread "tot" ist - Verhindert Deadlock
         process_two.start();
         try {
             sleep(1000);
