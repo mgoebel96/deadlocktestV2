@@ -11,7 +11,7 @@ public class Example {
         String[] output = startProcess();
         for (int i = 0; i < 4; i++) {
             System.out.println(output[i]);
-        }
+        }// gut
     }
 
     public static String[] startProcess() throws InterruptedException {
