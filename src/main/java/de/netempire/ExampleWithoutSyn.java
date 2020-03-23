@@ -17,6 +17,7 @@ public class ExampleWithoutSyn {
     public static String[] startProcess() throws InterruptedException {
         final ExampleWithoutSyn deadLockDemo = new ExampleWithoutSyn();
         final String[] result = new String[4];
+       
         final Thread process_one = new Thread(new Runnable() {
             public void run() {
                 try {
@@ -29,6 +30,7 @@ public class ExampleWithoutSyn {
             }
         });
 
+        // Verkürzte Schreibweise - Mit Lambda-Ausdruck
         Runnable task = () -> {
             result[2] = "Process Two hold Printer | wait -> Screen";
             result[3] = "Process Two hold Screen";
