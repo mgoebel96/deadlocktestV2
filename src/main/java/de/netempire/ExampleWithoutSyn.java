@@ -37,8 +37,6 @@ public class ExampleWithoutSyn {
         Thread process_two = new Thread(task);
 
         process_one.start();
-        process_one.join();
-        // Wartet bis Thread "tot" ist
         process_two.start();
         try {
             sleep(1000);
