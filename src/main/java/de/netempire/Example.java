@@ -44,8 +44,8 @@ public class Example {
             }
         });
         process_one.start();
- process_one.join();
-// Wartet bis Thread "tot" ist
+        // Wartet bis Thread "tot" ist -> Behebt Deadlock
+        //process_one.join();
         process_two.start();
         try {
             sleep(1000);
