@@ -1,5 +1,10 @@
 package de.netempire;
 
+import java.lang.management.ManagementFactory;
+import java.lang.management.ThreadInfo;
+import java.lang.management.ThreadMXBean;
+import java.util.Arrays;
+
 import static java.lang.Thread.sleep;
 
 public class ExampleDeadlock {
@@ -52,6 +57,7 @@ public class ExampleDeadlock {
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
+
         return result;
     }
 }
