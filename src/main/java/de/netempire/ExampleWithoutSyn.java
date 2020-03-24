@@ -30,7 +30,7 @@ public class ExampleWithoutSyn {
             }
         });
 
-        // Verkürzte Schreibweise - Mit Lambda-Ausdruck
+        // Shortened notation - with lambda expression
         Runnable task = () -> {
             result[2] = "Process Two hold Printer | wait -> Screen";
             result[3] = "Process Two hold Screen";

@@ -49,8 +49,8 @@ public class ExampleDeadlock {
             }
         });
         process_one.start();
-        // Wartet bis Thread "tot" ist -> Behebt Deadlock
-        //process_one.join();
+        // Wait until thread is "dead" -> fix deadlock
+        // process_one.join();
         process_two.start();
         try {
             sleep(1000);
