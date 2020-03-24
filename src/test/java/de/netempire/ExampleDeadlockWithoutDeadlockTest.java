@@ -12,9 +12,9 @@ public class ExampleDeadlockWithoutDeadlockTest {
     public void startProcess() {
         String[] result = ExampleWithoutDeadlock.startProcess();
 
-        //Es wird  überprüft, ob das Array, das man als Ergebnis erhält, frei von null-Werten ist.
-        //Wenn das nicht der Fall ist, sind die Prozesse fehlerfrei abgearbeitet worden.
-        //Andernfalls ist ein Fehler ( bzw. Deadlock) aufgetreten.
+        //It is checked whether the array is zero values.
+        // If this is the case, the processes have been executed without errors.
+        // Otherwise an error ( or deadlock ) has occurred.
         Stream<String> resultStream = Arrays.stream(result);
         resultStream.forEach((object) -> Assert.assertNotNull(object));
     }
