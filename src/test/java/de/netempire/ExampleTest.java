@@ -4,9 +4,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.util.Arrays;
-import de.netempire.*;
-
-import static org.junit.Assert.*;
+import java.util.stream.Stream;
 
 public class ExampleTest {
 
@@ -24,6 +22,8 @@ public class ExampleTest {
                 "Process Two hold Screen | wait -> Printer",
                 "Process Two hold Printer"};
 
-        Assert.assertArrayEquals(i, result);
+        //Arrays.stream
+        Stream<String> resultStream = Arrays.stream(result);
+        resultStream.forEach((object) -> Assert.assertNotNull(object));
     }
 }
