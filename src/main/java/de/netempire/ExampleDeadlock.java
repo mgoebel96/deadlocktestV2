@@ -2,7 +2,7 @@ package de.netempire;
 
 import static java.lang.Thread.sleep;
 
-public class Example {
+public class ExampleDeadlock {
 
     private final Object printer = new Object();
     private final Object screen = new Object();
@@ -15,7 +15,7 @@ public class Example {
     }
 
     public static String[] startProcess() throws InterruptedException {
-        final Example deadLockDemo = new Example();
+        final ExampleDeadlock deadLockDemo = new ExampleDeadlock();
         final String[] result = new String[4];
         final Thread process_one = new Thread(new Runnable() {
             public void run() {
