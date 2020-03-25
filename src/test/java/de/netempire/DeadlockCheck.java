@@ -13,7 +13,7 @@ public class DeadlockCheck {
     public void startProcess() {
         String[] result = new String[0];
         try {
-            result = ExampleWithoutDeadlock.startProcess();
+            result = ExampleWithDeadlock.startProcess();
         } catch (Exception e) {
             e.printStackTrace();
         }
