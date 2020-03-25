@@ -20,7 +20,9 @@ public class ExampleDeadlockTest {
         //It is checked whether the array is zero values.
         // If this is the case, the processes have been executed without errors.
         // Otherwise an error ( or deadlock ) has occurred.
-        Stream<String> resultStream = Arrays.stream(result);
-        resultStream.forEach((object) -> Assert.assertNotNull(object));
+        for(int i = 0; i < 4; i++){
+            Assert.assertNotEquals(null, result[i]);
+            // contents a null value -> Error
+        }
     }
 }
