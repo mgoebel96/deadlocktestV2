@@ -1,13 +1,8 @@
 package de.netempire;
 
-import java.lang.management.ManagementFactory;
-import java.lang.management.ThreadInfo;
-import java.lang.management.ThreadMXBean;
-import java.util.Arrays;
-
 import static java.lang.Thread.sleep;
 
-public class ExampleDeadlock {
+public class ExampleWithDeadlock {
 
     private final Object printer = new Object();
     private final Object screen = new Object();
@@ -20,7 +15,7 @@ public class ExampleDeadlock {
     }
 
     public static String[] startProcess() throws InterruptedException {
-        final ExampleDeadlock deadLockDemo = new ExampleDeadlock();
+        final ExampleWithDeadlock deadLockDemo = new ExampleWithDeadlock();
         final String[] result = new String[4];
         final Thread process_one = new Thread(new Runnable() {
             public void run() {

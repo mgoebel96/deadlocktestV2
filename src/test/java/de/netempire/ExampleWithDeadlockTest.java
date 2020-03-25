@@ -3,16 +3,13 @@ package de.netempire;
 import org.junit.Assert;
 import org.junit.Test;
 
-import java.util.Arrays;
-import java.util.stream.Stream;
-
-public class ExampleDeadlockTest {
+public class ExampleWithDeadlockTest {
 
     @Test
     public void startProcess() {
         String[] result = new String[0];
         try {
-            result = ExampleDeadlock.startProcess();
+            result = ExampleWithDeadlock.startProcess();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
